@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&family=Roboto:wght@400;700&display=swap');
+
+:root{
+    --primary-text-color: #183b56;
+    --secondary-text-color: #577592;
+    --accent-color: #2294ed;
+    --accent-color-dark: #1d69a3;
+    --padding-inline-section:20px;
+}
+
+body{
+    font-family: 'Poppins','sans-serif';
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #4070f4;
+}
+.container{
+    position: relative;
+    background-color: #fff;
+    max-width: 900px;
+    width: 100%;
+    border-radius: 6px;
+    padding: 30px;
+    margin: 0 15px;
+    box-shadow: 0  5px 10px rgba(0,0,0,0.1);
+    margin: auto;
+}
+.container header{
+    position: relative;
+    font-size: 20px;
+    color: #333;
+    font-weight: 600;
+}
+.container header::before{
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    height: 3px;
+    width: 27px;
+    background-color: #4070f4;
+    border-radius: 8px;
+}
+.container form{
+    position: relative;
+    background-color: #fff;
+    min-height: 490px;
+    margin-top: 16px;
+}
+
+.container form .title{
+    display: block;
+    margin-bottom: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    margin: 6px 0;
+    color: #333;
+}
+.container form .fields{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+form .fields .inputfield{
+    display: flex;
+    flex-direction: column;
+    width: calc(100%/3 - 15px);
+    margin: 4px 0;
+}
+.inputfield label{
+    font-size: 12px;
+    font-weight: 500;
+    color: #2e2e2e;
+}
+.inputfield input,select{
+    height: 42px;
+    margin: 8px 0;
+    font-size: 14px;
+    font-weight: 400;
+    border-radius: 5px;
+    border: 1px solid #aaa;
+    outline: none;
+    padding: 0 15px;
+}
+.inputfield input:is(:focus, :valid){
+    box-shadow: 0 3px 6px rgba(0,0,0,0.13);
+}
+.personaldetails .ID{
+    margin-top: 10px;
+}
+.container form button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 45px;
+    max-width: 200px;
+    width: 100%;
+    outline: none;
+    background-color: #4070f4;
+    color: #fff;
+    border-radius: 5px;
+    margin: 25px 0;
+    transition: all 0.3s linear;
+    cursor: pointer;
+}
+.buttons{
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+form .buttons button, .nextbtn{
+    margin-right: 14px;
+    font-size: 14px;
+    font-weight: 400;
+}
+.container form .form{
+    position: absolute;
+    transition: 0.3s ease;
+}
+.container form .form.second{
+    opacity: 0;
+    pointer-events: none;
+}
+form.secActive .form.second{
+    opacity: 1;
+    pointer-events: auto;
+}
+form.secActive .form.first{
+    opacity: 0;
+    pointer-events: none;
+}
